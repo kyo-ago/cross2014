@@ -1,0 +1,10 @@
+{
+  "src_files": [
+    "js/lib/*.js",
+    "test/lib/*.js",
+    "setup.js",
+    "js/*.js",
+    "test/*.js"
+  ],
+  "test_page": "tests.mustache"
+}

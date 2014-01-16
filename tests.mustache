@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="mocha.css" />
+</head>
+<body>
+<div id="mocha"></div>
+<div class="jQuery button"></div>
+<div class="all button"><div class="form"></div></div>
+<form class="content"></form>
+{{#serve_files}}
+<script src="{{src}}"></script>
+{{/serve_files}}
+<script src="/testem.js"></script>
+<script>mocha.run();</script>
+</body>
+</html>
