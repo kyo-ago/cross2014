@@ -2,8 +2,7 @@ describe('1', function() {
   it('ボタンをクリックしてalertを表示する', function() {
     sinon.stub(window, 'alert');
  
-    var init = window.testInit.args.shift()[0]
-    init();
+    window.testInit.args.shift()[0]();
     $('.jQuery.button').click();
  
     expect(alert.called).to.eql(true);
