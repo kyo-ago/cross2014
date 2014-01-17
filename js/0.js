@@ -1,0 +1,3 @@
+function firstTest () {
+    return true;
+}
