@@ -1,13 +1,14 @@
 describe('2', function() {
-  it('非同期でalertを表示する', function() {
-    sinon.stub(window, 'alert');
+  it('非同期でupdateLabelを表示する', function() {
+    sinon.stub(window, 'updateLabel');
  
     var fakeclock = sinon.useFakeTimers();
-    window.testInit.args.shift()[0]();
+    var init = window.testInit.args.shift();
+    init[0]();
     fakeclock.tick(100);
  
-    expect(alert.called).to.eql(true);
-    window.alert.restore();
+    expect(updateLabel.called).to.eql(true);
+    window.updateLabel.restore();
     fakeclock.restore();
   });
 });

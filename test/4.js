@@ -17,14 +17,14 @@ describe('4', function() {
       'Content-Type': 'text/plain'
     }, 'result']);
  
-    sinon.stub(window, 'alert');
+    sinon.stub(window, 'updateLabel');
  
     testInit.lastCall.args[0]();
     $('form').submit();
     fakeserver.respond();
  
-    expect(alert.called).to.eql(true);
-    window.alert.restore();
+    expect(updateLabel.called).to.eql(true);
+    window.updateLabel.restore();
     fakeserver.restore();
   });
 });

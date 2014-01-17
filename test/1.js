@@ -1,11 +1,12 @@
 describe('1', function() {
-  it('ボタンをクリックしてalertを表示する', function() {
-    sinon.stub(window, 'alert');
+  it('ボタンをクリックしてupdateLabelを表示する', function() {
+    sinon.stub(window, 'updateLabel');
  
-    window.testInit.args.shift()[0]();
+    var init = window.testInit.args.shift();
+    init[0]();
     $('.jQuery.button').click();
  
-    expect(alert.called).to.eql(true);
-    window.alert.restore();
+    expect(updateLabel.called).to.eql(true);
+    window.updateLabel.restore();
   });
 });
